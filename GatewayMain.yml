@@ -1,9 +1,9 @@
 server:
-  host-address-authentication: http://192.168.4.101:8000
-  host-address-signin-session: http://192.168.4.101:8024
-  host-address-microservice-drive: http://192.168.4.101:8016
-  host-address-microservice-notification: http://192.168.4.101:8080
-  host-address-microservice-messaging: http://192.168.4.101:8081
+  host-address-authentication: http://94.232.173.157:8000
+  host-address-signin-session: http://94.232.173.157:8024
+  host-address-microservice-drive: http://94.232.173.157:8016
+  host-address-microservice-notification: http://94.232.173.157:8018
+  host-address-microservice-messaging: http://94.232.173.157:8017
   servlet:
     session:
       timeout: 600000
@@ -15,15 +15,12 @@ server:
     min-response-size: 1024
 spring:
   application:
-    name: GatewayMain
-  profiles:
-    active:
-    - dev
+    name: GatewayClass
   boot:
     admin:
       client:
         url:
-        - http://192.168.4.101:8022
+        - http://administrator:8080
   servlet:
     multipart:
       max-file-size: 102400KB
@@ -73,13 +70,74 @@ hystrix:
 zuul:
   sensitive-headers: Cookie,Set-Cookie
   host:
-    connect-timeout-millis: 60000
-    socket-timeout-millis: 60000
-    time-to-live: 60000
+    connect-timeout-millis: 60000000
+    socket-timeout-millis: 60000000
+    time-to-live: 60000000
   routes:
     uaa:
       path: /UAA/**
       service-id: UAA
+    uaa-class:
+      path: /UAAClass/**
+      service-id: UAAClass
+    captcha:
+      path: /Captcha/**
+      service-id: Captcha
+
+    microservice-class:
+      path: /MicroserviceClass/**
+      service-id: MicroserviceClass    
+    microservice-course:
+      path: /MicroserviceCourse/**
+      service-id: MicroserviceCourse  
+    microservice-drive:
+      path: /MicroserviceDrive/**
+      service-id: MicroserviceDrive    
+    microservice-basic-information:
+      path: /MicroserviceBasicInformation/**
+      service-id: MicroserviceBasicInformation    
+    microservice-form-builder:
+      path: /MicroserviceFormBuilder/**
+      service-id: MicroserviceFormBuilder    
+    microservice-messaging:
+      path: /MicroserviceMessaging/**
+      service-id: MicroserviceMessaging   
+    microservice-organization-chart:
+      path: /MicroserviceOrganizationChart/**
+      service-id: MicroserviceOrganizationChart   
+    microservice-secretariat:
+      path: /MicroserviceSecretariat/**
+      service-id: MicroserviceSecretariat  
+    microservice-notification:
+      path: /MicroserviceNotification/**
+      service-id: MicroserviceNotification  
+    microservice-community:
+      path: /MicroserviceCommunity/**
+      service-id: MicroserviceCommunity  
+    microservice-training:
+      path: /MicroserviceTraining/**
+      service-id: MicroserviceTraining 
+    microservice-feed-back:
+      path: /MicroserviceFeedBack/**
+      service-id: MicroserviceFeedBack 
+    signin-session:
+      path: /SigninSession/**
+      service-id: SigninSession  
+    microservice-payment:
+      path: /MicroservicePayment/**
+      service-id: MicroservicePayment 
+      
+    microservice-multimedia-convertor:
+      path: /MicroserviceMultimediaConvertor/**
+      service-id: MicroserviceMultimediaConvertor
+
+    microservice-video-conference:
+      path: /MicroserviceVideoConference/**
+      service-id: MicroserviceVideoConference
+
+    service-sama:
+      path: /ServiceSama/**
+      service-id: ServiceSama
 
 management:
   endpoints:
@@ -93,21 +151,23 @@ logging:
   path: log
   file: 
     max-size: 5MB
-    max-history: 20
+    max-history: 100
 jwt:
   token:
     header-name: Authorization
     header-name-uaa: AuthorizationUAA
     header-name-sub-uaa: AuthorizationSubUAA
 project:
-  key: AVA_NEGAR_PROJECT
+  key: SAMA_CLASS_PROJECT
 security:
   oauth2:
     client:
       client-id: GatewayClassId
       client-secret: GatewayClassSecret
-      client-id-and-secret-in-base-64: R2F0ZXdheUNsYXNzSWQ6R2F0ZXdheUNsYXNzU2VjcmV0 # base64 of clientId:clientSecret
+##### clientId + ":" + clientSecret
+      client-id-and-secret-in-base-64: R2F0ZXdheUNsYXNzSWQ6R2F0ZXdheUNsYXNzU2VjcmV0
       grant-type: password
-#      access-token-uri: http://192.168.4.101:8010/oauth/token
-#      user-authorization-uri: http://192.168.4.101:8010/oauth/authorize
- 
+#      access-token-uri: http://uaa:8080/oauth/token
+#      user-authorization-uri: http://uaa:8080/oauth/authorize
+    resource:
+      user-info-uri: http://uaa:8080/account/principal
