@@ -15,7 +15,7 @@ server:
     min-response-size: 1024
 spring:
   application:
-    name: GatewayClass
+    name: GatewayMain
   profiles:
     active:
     - dev
@@ -36,7 +36,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8021/eureka
+      defaultZone: http://discovery:8021/eureka
     enabled: true
     healthcheck:
       enabled: true
@@ -80,74 +80,7 @@ zuul:
     uaa:
       path: /UAA/**
       service-id: UAA
-    uaa-class:
-      path: /UAAClass/**
-      service-id: UAAClass
-    captcha:
-      path: /Captcha/**
-      service-id: Captcha
 
-    microservice-class:
-      path: /MicroserviceClass/**
-      service-id: MicroserviceClass    
-
-    microservice-social-network:
-      path: /MicroserviceSocialNetwork/**
-      service-id: MicroserviceSocialNetwork    
-    microservice-course:
-      path: /MicroserviceCourse/**
-      service-id: MicroserviceCourse  
-    microservice-drive:
-      path: /MicroserviceStore/**
-      service-id: MicroserviceStore    
-    microservice-basic-data:
-      path: /MicroserviceBasicData/**
-      service-id: MicroserviceBasicData    
-    microservice-form-builder:
-      path: /MicroserviceFormBuilder/**
-      service-id: MicroserviceFormBuilder    
-    microservice-real-time:
-      path: /MicroserviceRealtime/**
-      service-id: MicroserviceRealtime   
-    microservice-organizational-structure:
-      path: /MicroserviceOrganizationalStructure/**
-      service-id: MicroserviceOrganizationalStructure   
-    microservice-secretariat:
-      path: /MicroserviceSecretariat/**
-      service-id: MicroserviceSecretariat  
-    microservice-notification:
-      path: /MicroserviceNotification/**
-      service-id: MicroserviceNotification  
-    microservice-community:
-      path: /MicroserviceCommunity/**
-      service-id: MicroserviceCommunity  
-    microservice-training:
-      path: /MicroserviceTraining/**
-      service-id: MicroserviceTraining 
-      
-    microservice-feed-back:
-      path: /MicroserviceFeedBack/**
-      service-id: MicroserviceFeedBack 
-      
-    microservice-payment:
-      path: /MicroservicePayment/**
-      service-id: MicroservicePayment 
-      
-    signin-session:
-      path: /SigninSession/**
-      service-id: SigninSession  
-
-    microservice-multimedia-convertor:
-      path: /MicroserviceMultimediaConvertor/**
-      service-id: MicroserviceMultimediaConvertor
-
-    microservice-video-conference:
-      path: /MicroserviceVideoConference/**
-      service-id: MicroserviceVideoConference
-
-    service-sama:
-      path: /ServiceSama/**
-      service-id: ServiceSama
 management:
   endpoints:
     web:
@@ -167,7 +100,7 @@ jwt:
     header-name-uaa: AuthorizationUAA
     header-name-sub-uaa: AuthorizationSubUAA
 project:
-  key: SAMA_LIVE_PROJECT
+  key: AVA_NEGAR_PROJECT
 security:
   oauth2:
     client:
@@ -177,5 +110,4 @@ security:
       grant-type: password
 #      access-token-uri: http://192.168.4.101:8010/oauth/token
 #      user-authorization-uri: http://192.168.4.101:8010/oauth/authorize
-    resource:
-      user-info-uri: http://192.168.4.101:8010/account/principal
+ 
