@@ -15,7 +15,7 @@ server:
     min-response-size: 1024
 spring:
   application:
-    name: GatewayClass
+    name: GatewayMain
   boot:
     admin:
       client:
@@ -77,67 +77,6 @@ zuul:
     uaa:
       path: /UAA/**
       service-id: UAA
-    uaa-class:
-      path: /UAAClass/**
-      service-id: UAAClass
-    captcha:
-      path: /Captcha/**
-      service-id: Captcha
-
-    microservice-class:
-      path: /MicroserviceClass/**
-      service-id: MicroserviceClass    
-    microservice-course:
-      path: /MicroserviceCourse/**
-      service-id: MicroserviceCourse  
-    microservice-drive:
-      path: /MicroserviceDrive/**
-      service-id: MicroserviceDrive    
-    microservice-basic-information:
-      path: /MicroserviceBasicInformation/**
-      service-id: MicroserviceBasicInformation    
-    microservice-form-builder:
-      path: /MicroserviceFormBuilder/**
-      service-id: MicroserviceFormBuilder    
-    microservice-messaging:
-      path: /MicroserviceMessaging/**
-      service-id: MicroserviceMessaging   
-    microservice-organization-chart:
-      path: /MicroserviceOrganizationChart/**
-      service-id: MicroserviceOrganizationChart   
-    microservice-secretariat:
-      path: /MicroserviceSecretariat/**
-      service-id: MicroserviceSecretariat  
-    microservice-notification:
-      path: /MicroserviceNotification/**
-      service-id: MicroserviceNotification  
-    microservice-community:
-      path: /MicroserviceCommunity/**
-      service-id: MicroserviceCommunity  
-    microservice-training:
-      path: /MicroserviceTraining/**
-      service-id: MicroserviceTraining 
-    microservice-feed-back:
-      path: /MicroserviceFeedBack/**
-      service-id: MicroserviceFeedBack 
-    signin-session:
-      path: /SigninSession/**
-      service-id: SigninSession  
-    microservice-payment:
-      path: /MicroservicePayment/**
-      service-id: MicroservicePayment 
-      
-    microservice-multimedia-convertor:
-      path: /MicroserviceMultimediaConvertor/**
-      service-id: MicroserviceMultimediaConvertor
-
-    microservice-video-conference:
-      path: /MicroserviceVideoConference/**
-      service-id: MicroserviceVideoConference
-
-    service-sama:
-      path: /ServiceSama/**
-      service-id: ServiceSama
 
 management:
   endpoints:
@@ -158,7 +97,7 @@ jwt:
     header-name-uaa: AuthorizationUAA
     header-name-sub-uaa: AuthorizationSubUAA
 project:
-  key: SAMA_CLASS_PROJECT
+  key: AVA_NEGAR_PROJECT
 security:
   oauth2:
     client:
