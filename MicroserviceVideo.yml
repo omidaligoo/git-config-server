@@ -27,7 +27,7 @@ spring:
     mongodb:
       uri: mongodb://mongo/Call
     redis:
-      hostname: localhost
+      hostname: redis
       port: 6379
   rabbitmq:
     host: 79.175.166.178
