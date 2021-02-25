@@ -27,8 +27,9 @@ spring:
     mongodb:
       uri: mongodb://mongo/Call
     redis:
-      hostname: 79.175.166.178
-      port: 6000
+      hostname: avanegar-redis
+      port: 6379
+      password: kavenegardotio
   rabbitmq:
     host: 79.175.166.178
     port: 5672
