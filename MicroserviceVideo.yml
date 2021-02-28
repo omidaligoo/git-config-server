@@ -24,10 +24,8 @@ spring:
       max-file-size: 10240KB
       max-request-size: 10240KB
   data:
-    mongodb:
-      uri: mongodb://mongo/Call
     redis:
-      hostname: avanegar-redis
+      hostname: video-redis
       port: 6379
       password: kavenegardotio
   rabbitmq:
