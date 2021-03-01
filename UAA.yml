@@ -26,7 +26,7 @@ spring:
           use_jdbc_metadata_defaults: false
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
   datasource:
-    url: jdbc:postgresql://video-postgres/avanegar_db 
+    url: jdbc:postgresql://video-postgres:5432/avanegar_db 
     username: kavenegar
     password: k@venegardotio
   database:
