@@ -30,6 +30,12 @@ spring:
     port: 5672
     username: guest
     password: guest
+  datasource:
+    url: jdbc:postgresql://video-postgres/avanegar_db
+    username: kavenegar
+    password: k@venegardotio
+  jpa:
+    generate-ddl: true;
 eureka:
   client:
     service-url:
