@@ -30,12 +30,17 @@ spring:
     port: 5672
     username: guest
     password: guest
+  database: 
+    driverClassName: org.postgresql.Driver
   datasource:
     url: jdbc:postgresql://video-postgres/avanegar_db
     username: kavenegar
     password: k@venegardotio
   jpa:
-    generate-ddl: true;
+    database: POSTGRESQL
+    hibernate:
+       ddl-auto: update
+    generate-ddl: true 
 eureka:
   client:
     service-url:
