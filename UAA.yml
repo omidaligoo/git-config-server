@@ -18,7 +18,7 @@ spring:
         url:
         - http://administrator:8080
   datasource:
-    url: jdbc:postgresql://video-postgres:7000/avanegar_db
+    url: jdbc:postgresql://video-postgres:7000/avanegar_db 
     username: kavenegar
     password: k@venegardotio
   jpa:
