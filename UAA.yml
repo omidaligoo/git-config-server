@@ -21,7 +21,7 @@ spring:
     database: POSTGRESQL
     generate-ddl: true 
   datasource:
-    url: jdbc:postgresql://video-postgres:7000/avanegar_db 
+    url: jdbc:postgresql://voice.kavenegar.com:7000/avanegar_db 
     username: kavenegar
     password: k@venegardotio
   database:
