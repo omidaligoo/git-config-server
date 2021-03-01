@@ -17,12 +17,15 @@ spring:
       client:
         url:
         - http://administrator:8080
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: true 
   datasource:
     url: jdbc:postgresql://video-postgres:7000/avanegar_db 
     username: kavenegar
     password: k@venegardotio
-  jpa:
-    generate-ddl: true 
+  database:
+    driverClassName: org.postgresql.Driver
 eureka:
   client:
     service-url:
