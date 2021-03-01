@@ -22,9 +22,6 @@ spring:
     username: kavenegar
     password: k@venegardotio
   jpa:
-    database: POSTGRESQL
-    hibernate:
-       ddl-auto: update
     generate-ddl: true 
 eureka:
   client:
