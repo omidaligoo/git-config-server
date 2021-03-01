@@ -33,7 +33,7 @@ spring:
   database: 
     driverClassName: org.postgresql.Driver
   datasource:
-    url: video-postgres/avanegar_db
+    url: jdbc:postgresql://video-postgres:5432/config_db
     username: kavenegar
     password: k@venegardotio
   jpa:
