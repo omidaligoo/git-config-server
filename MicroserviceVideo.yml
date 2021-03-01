@@ -33,6 +33,17 @@ spring:
     port: 5672
     username: rabbitmq
     password: rabbitmq
+    database: 
+    driverClassName: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://video-postgres:5432/config_db
+    username: kavenegar
+    password: k@venegardotio
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+       ddl-auto: update
+    generate-ddl: true 
 eureka:
   client:
     service-url:
