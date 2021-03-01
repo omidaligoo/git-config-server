@@ -29,7 +29,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery:8080/eureka
+      defaultZone: http://video-discovery-service:8080/eureka
     enabled: true
     healthcheck:
       enabled: true
