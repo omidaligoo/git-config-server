@@ -1,5 +1,4 @@
 server:
-  host-address-authentication: http://94.232.173.157:8000
   servlet:
     session:
       timeout: 600000
@@ -12,11 +11,6 @@ server:
 spring:
   application:
     name: UAA
-  boot:
-    admin:
-      client:
-        url:
-        - http://administrator:8080
   jpa:
     database: POSTGRESQL
     generate-ddl: true 
