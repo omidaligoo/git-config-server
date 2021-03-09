@@ -11,20 +11,10 @@ server:
 spring:
   application:
     name: GatewayMain
-  boot:
-    admin:
-      client:
-        url:
-        - http://administrator:8080
   servlet:
     multipart:
       max-file-size: 102400KB
       max-request-size: 102400KB
-  rabbitmq:
-    host: 192.168.4.101
-    port: 5672
-    username: guest
-    password: guest
   database: 
     driverClassName: org.postgresql.Driver
   datasource:
@@ -82,7 +72,7 @@ zuul:
   routes:
     uaa:
       path: /UAA/**
-      service-id: uaa
+      service-id: UAA
     video-service:
       path: /VideoService/**
       service-id: VideoService
