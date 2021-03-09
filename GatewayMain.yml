@@ -88,6 +88,9 @@ zuul:
     uaa:
       path: /UAA/**
       service-id: UAA
+    video-service:
+      path: /VideoService/**
+      service-id: VideoService
 
 management:
   endpoints:
@@ -105,16 +108,14 @@ logging:
 jwt:
   token:
     header-name: Authorization
-    header-name-uaa: AuthorizationUAA
-    header-name-sub-uaa: AuthorizationSubUAA
 project:
   key: AVA_NEGAR_PROJECT
 security:
   oauth2:
     client:
-      client-id: GatewayClassId
-      client-secret: GatewayClassSecret
-##### clientId + ":" + clientSecret
+      client-id: AVA_NEGAR_PROJECT
+      client-secret: AVA_NEGAR_PROJECT_SECRET
+##### clientId + ":" + clientSecret //please change base64
       client-id-and-secret-in-base-64: R2F0ZXdheUNsYXNzSWQ6R2F0ZXdheUNsYXNzU2VjcmV0
       grant-type: password
 #      access-token-uri: http://uaa:8080/oauth/token
