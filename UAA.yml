@@ -83,11 +83,10 @@ logging:
     max-history: 100
 jwt:
   token:
-    access-token-validity-seconds: 720
+    access-token-validity-seconds: 700000
     support-refresh-token: true
     header-name: Authorization
-    header-name-uaa: AuthorizationUAA
-    header-name-sub-uaa: AuthorizationSubUAA
+
 project:
   key: AVA_NEGAR_PROJECT
 security:
