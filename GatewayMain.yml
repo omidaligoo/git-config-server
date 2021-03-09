@@ -1,9 +1,4 @@
 server:
-  host-address-authentication: http://94.232.173.157:8000
-  host-address-signin-session: http://94.232.173.157:8024
-  host-address-microservice-drive: http://94.232.173.157:8016
-  host-address-microservice-notification: http://94.232.173.157:8018
-  host-address-microservice-messaging: http://94.232.173.157:8017
   servlet:
     session:
       timeout: 600000
@@ -87,7 +82,7 @@ zuul:
   routes:
     uaa:
       path: /UAA/**
-      service-id: UAA
+      service-id: uaa
     video-service:
       path: /VideoService/**
       service-id: VideoService
