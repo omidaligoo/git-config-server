@@ -73,7 +73,6 @@ zuul:
     uaa:
       path: /UAA/**
       service-id: UAA
-      stripPrefix: false
     video-service:
       path: /VideoService/**
       service-id: VideoService
