@@ -27,7 +27,7 @@ spring:
     redis:
       hostname: video-redis
       port: 6379
-      password: kavenegardotio1
+      password: kavenegardotio
   rabbitmq:
     host: video-rabbitmq
     port: 5672
