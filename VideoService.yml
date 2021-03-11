@@ -10,7 +10,7 @@ server:
     min-response-size: 1024
 spring:
   application:
-    name: MicroserviceVideo
+    name: VideoService
   profiles:
     active:
     - dev
@@ -102,8 +102,8 @@ project:
 security:
   oauth2:
     client:
-      client-id: MicroserviceVideo
-      client-secret: MicroserviceVideo
+      client-id: VideoService
+      client-secret: VideoService
 #      access-token-uri: http://192.168.4.101:8010/oauth/token
 #      user-authorization-uri: http://192.168.4.101:8010/oauth/authorize
     resource:
