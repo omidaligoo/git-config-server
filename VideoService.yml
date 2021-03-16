@@ -27,7 +27,7 @@ spring:
     redis:
       database: 0
       timeout: 60000
-      hostname: http://video.kavenegar.com
+      hostname: video.kavenegar.com
       port: 7010
       password: kavenegardotio
   rabbitmq:
