@@ -25,8 +25,8 @@ spring:
       max-request-size: 10240KB
   data:
     redis:
-      hostname: video-redis
-      port: 6379
+      hostname: http://video.kavenegar.com
+      port: 7010
       password: kavenegardotio
   rabbitmq:
     host: video-rabbitmq
