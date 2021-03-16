@@ -35,8 +35,6 @@ spring:
     port: 5672
     username: rabbitmq
     password: rabbitmq
-  database: 
-    driverClassName: org.postgresql.Driver
   jpa:
     database: POSTGRESQL
     generate-ddl: true 
