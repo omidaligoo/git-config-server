@@ -23,11 +23,12 @@ spring:
     multipart:
       max-file-size: 10240KB
       max-request-size: 10240KB
-  data:
-    redis:
-      hostname: http://video.kavenegar.com
-      port: 7010
-      password: kavenegardotio
+  redis:
+    database: 0
+    timeout: 60000
+    hostname: http://video.kavenegar.com
+    port: 7010
+    password: kavenegardotio
   rabbitmq:
     host: video-rabbitmq
     port: 5672
