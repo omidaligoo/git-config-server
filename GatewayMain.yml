@@ -74,7 +74,7 @@ zuul:
       path: /auth/**
       service-id: UAA
     video-service:
-      path: /VideoService/**
+      path: /video/**
       service-id: VideoService
 
 management:
