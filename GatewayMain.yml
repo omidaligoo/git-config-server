@@ -71,7 +71,7 @@ zuul:
     time-to-live: 60000000
   routes:
     uaa:
-      path: /UAA/**
+      path: /auth/**
       service-id: UAA
     video-service:
       path: /VideoService/**
